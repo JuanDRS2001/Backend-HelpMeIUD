@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Min;
 
 /**
- * Entidad para Casos 
+ * ENTIDAD PARA CASOS
  * @author JuanDa
  *
  */
@@ -23,9 +23,8 @@ import javax.validation.constraints.Min;
 //ORM -> Hibernate
 @Entity
 @Table(name = "casos")
-
 public class Caso implements Serializable{
-	
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -36,7 +35,7 @@ public class Caso implements Serializable{
 	private LocalDateTime fechaHora;
 	
 	private float latitud;
-
+	
 	private float longitud;
 	
 	private Boolean visible;
@@ -49,7 +48,7 @@ public class Caso implements Serializable{
 	@Column(name = "rmi_url")
 	private String rmiUrl;
 	
-
+	
 	@ManyToOne
 	@JoinColumn(name = "usuarios_id")
 	private Usuario usuario;
@@ -58,7 +57,6 @@ public class Caso implements Serializable{
 	@JoinColumn(name = "delitos_id")
 	private Delito delito;
 	
-
 	@PrePersist
 	public void prePersist() {
 		if(fechaHora == null) {
@@ -66,7 +64,6 @@ public class Caso implements Serializable{
 		}
 	}
 
-	
 	/**
 	 * @return the id
 	 */

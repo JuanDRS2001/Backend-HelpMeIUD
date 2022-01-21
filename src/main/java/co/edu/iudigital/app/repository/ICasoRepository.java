@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import co.edu.iudigital.app.model.Caso;
 
-@Repository // redundante
+@Repository
 public interface ICasoRepository extends JpaRepository<Caso, Long>{
 	
 }

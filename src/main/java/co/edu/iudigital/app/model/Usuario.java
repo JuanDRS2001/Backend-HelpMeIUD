@@ -41,7 +41,7 @@ public class Usuario implements Serializable{
 	private String nombre;
 	
 	@NotEmpty(message = "Espacio obligatorio")
-	@Size(min = 1, max = 12, message = "Fuera del rango")
+	@Size(min = 1, max = 12, message = "Fuera del rango permitido")
 	@Column(nullable = true, length = 120)
 	private String apellido;
 	
